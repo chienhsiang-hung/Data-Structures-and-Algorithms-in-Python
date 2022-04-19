@@ -1,4 +1,4 @@
-# Data-Structures-and-Algorithms-in-Python
+# [Data-Structures-and-Algorithms-in-Python](https://jovian.ai/learn/data-structures-and-algorithms-in-python)
 A beginner-friendly introduction to common data structures (linked lists, stacks, queues, graphs) and algorithms (search, sorting, recursion, dynamic programming) in Python. This course will help you prepare for coding interviews and assessments.
 
 ## Lesson 1 - Binary Search, Linked Lists and Complexity
