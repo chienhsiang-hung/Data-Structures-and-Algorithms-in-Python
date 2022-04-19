@@ -5,3 +5,4 @@ A beginner-friendly introduction to common data structures (linked lists, stacks
 ### Linear and Binary Search, Complexity and Big O Notation, Linked Lists using Python Classes
 - [Linear and Binary Search](https://github.com/chienhsiang-hung/Data-Structures-and-Algorithms-in-Python/blob/main/1%20-%20Binary%20Search%2C%20Linked%20Lists%20and%20Complexity/python-binary-search.ipynb)
 - [Linked Lists in Python](https://github.com/chienhsiang-hung/Data-Structures-and-Algorithms-in-Python/blob/main/1%20-%20Binary%20Search%2C%20Linked%20Lists%20and%20Complexity/python-classes-and-linked-lists.ipynb)
+  - [Reverse Linked List - Iterative AND Recursive - Leetcode 206 - Python](https://youtu.be/G0_I-ZF0S38)
