@@ -9,3 +9,10 @@ A beginner-friendly introduction to common data structures (linked lists, stacks
 ### Assignment 1 - Binary Search Practice
 #### Understand and solve a problem systematically, Implement linear search and analyze it, Optimize the solution using binary search
 - [Assignment on Binary Search](https://github.com/chienhsiang-hung/Data-Structures-and-Algorithms-in-Python/blob/main/1%20-%20Binary%20Search%2C%20Linked%20Lists%20and%20Complexity/python-binary-search-assignment.ipynb)
+
+## Lesson 2 - Binary Search Trees, Traversals and Recursion
+#### Binary trees, traversals, and recursion, Binary search trees & common operations, Balanced binary trees and optimizations
+- [Binary Search Trees in Python](https://github.com/chienhsiang-hung/Data-Structures-and-Algorithms-in-Python/blob/main/2%20-%20Binary%20Search%20Trees%2C%20Traversals%20and%20Recursion/python-binary-search-trees.ipynb)
+  - [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+  - [144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)
+  - [145. Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)
