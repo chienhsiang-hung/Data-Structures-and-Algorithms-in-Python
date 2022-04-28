@@ -19,3 +19,4 @@ A beginner-friendly introduction to common data structures (linked lists, stacks
   - [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
   - [111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
   - [543. Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
+  - [958. Check Completeness of a Binary Tree](https://leetcode.com/problems/check-completeness-of-a-binary-tree/)
