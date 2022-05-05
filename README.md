@@ -20,11 +20,11 @@ A beginner-friendly introduction to common data structures (linked lists, stacks
   - [111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
   - [543. Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
   - [958. Check Completeness of a Binary Tree](https://leetcode.com/problems/check-completeness-of-a-binary-tree/)
-  - [][Binary Tree: Interview Questions and Practice Problems](https://medium.com/techie-delight/binary-tree-interview-questions-and-practice-problems-439df7e5ea1f)
-  - [][Tree - LeetCode](https://leetcode.com/tag/tree/)
+  - [*Binary Tree: Interview Questions and Practice Problems*](https://medium.com/techie-delight/binary-tree-interview-questions-and-practice-problems-439df7e5ea1f)
+  - [*Tree - LeetCode*](https://leetcode.com/tag/tree/)
   #### Self-Balancing Binary Trees and AVL Trees
-  - [][10.1 AVL Tree - Insertion and Rotations](https://www.youtube.com/watch?v=jDM6_TnYIqE&t=482s)
-  - [][AVL Tree | Set 1 (Insertion)](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/)
+  - [*10.1 AVL Tree - Insertion and Rotations*](https://www.youtube.com/watch?v=jDM6_TnYIqE&t=482s)
+  - [*AVL Tree | Set 1 (Insertion)*](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/)
 ## Assignment 2 - Hash Tables and Python Dictionaries
 #### Hash tables from scratch in Python, Handling collisions using linear probing, Replicating Python dictionaries
 
