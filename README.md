@@ -25,3 +25,6 @@ A beginner-friendly introduction to common data structures (linked lists, stacks
   #### Self-Balancing Binary Trees and AVL Trees
   - [10.1 AVL Tree - Insertion and Rotations](https://www.youtube.com/watch?v=jDM6_TnYIqE&t=482s)
   - [AVL Tree | Set 1 (Insertion)](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/)
+## Assignment 2 - Hash Tables and Python Dictionaries
+#### Hash tables from scratch in Python, Handling collisions using linear probing, Replicating Python dictionaries
+
