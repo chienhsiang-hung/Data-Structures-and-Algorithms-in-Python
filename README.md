@@ -29,3 +29,6 @@ A beginner-friendly introduction to common data structures (linked lists, stacks
 #### Hash tables from scratch in Python, Handling collisions using linear probing, Replicating Python dictionaries
 - [Assignment on Hash Tables](https://github.com/chienhsiang-hung/Data-Structures-and-Algorithms-in-Python/blob/main/2%20-%20Binary%20Search%20Trees%2C%20Traversals%20and%20Recursion/python-hash-tables-assignment.ipynb)
 
+## Lesson 3 - Sorting Algorithms and Divide & Conquer
+#### Bubble sort and Insertion Sort, Merge sort using Divide & Conquer, Quicksort and average complexity
+- [Sorting and Divide & Conquer]()
