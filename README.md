@@ -31,4 +31,4 @@ A beginner-friendly introduction to common data structures (linked lists, stacks
 
 ## Lesson 3 - Sorting Algorithms and Divide & Conquer
 #### Bubble sort and Insertion Sort, Merge sort using Divide & Conquer, Quicksort and average complexity
-- [Sorting and Divide & Conquer]()
+- [Sorting and Divide & Conquer](https://github.com/chienhsiang-hung/Data-Structures-and-Algorithms-in-Python/blob/main/3%20-%20Sorting%20Algorithms%20and%20Divide%20%26%20Conquer/python-sorting-divide-and-conquer.ipynb)
