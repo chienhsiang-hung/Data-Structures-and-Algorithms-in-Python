@@ -1,6 +1,4 @@
-import time
 import unittest
-from collections import defaultdict
 
 def permutation(s1, s2):
     '''
