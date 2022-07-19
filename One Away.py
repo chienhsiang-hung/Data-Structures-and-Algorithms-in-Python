@@ -13,7 +13,8 @@ def one_away(s1, s2):
     
     # remove and insert
     elif abs(len(s1) - len(s2)) == 1:
-        if abs(len(set(s1)) - len(set(s2))) <= 1:
+        overlapped_len = len( set(s1) & set(s2) )
+        if abs( len(set(s1)) - overlapped_len ) <= 1:
             return True
     
     # replace
