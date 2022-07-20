@@ -1,52 +1,11 @@
-test_cases = [
-    # (
-    #     [
-    #         [1, 2, 3]
-    #     ],
-    #     [
-    #         [1],
-    #         [2],
-    #         [3]
-    #     ]
-    # ),
-    # ([[1], [2], [3]], [[3,2,1]]),
-    ### it's an NxN matrix ###
-    (
-        [
-            [1,2,3],
-            [4,5,6],
-            [7,8,9]
-        ],
-        [
-            [7,4,1],
-            [8,5,2],
-            [9,6,3]
-        ]
-    ),
+import unittest
 
-        ([[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[7, 4, 1], [8, 5, 2], [9, 6, 3]]),
-        (
-            [
-                [1, 2, 3, 4, 5],
-                [6, 7, 8, 9, 10],
-                [11, 12, 13, 14, 15],
-                [16, 17, 18, 19, 20],
-                [21, 22, 23, 24, 25],
-            ],
-            [
-                [21, 16, 11, 6, 1],
-                [22, 17, 12, 7, 2],
-                [23, 18, 13, 8, 3],
-                [24, 19, 14, 9, 4],
-                [25, 20, 15, 10, 5],
-            ],
-        ),
-]
+
 
 def rotate_matrix_InPlace(matrix):
     height = len(matrix)
     width = len(matrix[0])
-    pass
+    return True
 
 def rotate_matrix(matrix):
     '''
@@ -96,12 +55,68 @@ def rotate_matrix_wrong(matrix):
         i += 1
     
     return new_matrix
-        
+
+
+class Test(unittest.TestCase):
+    test_cases = [
+        # (
+        #     [
+        #         [1, 2, 3]
+        #     ],
+        #     [
+        #         [1],
+        #         [2],
+        #         [3]
+        #     ]
+        # ),
+        # ([[1], [2], [3]], [[3,2,1]]),
+        ### it's an NxN matrix ###
+        (
+            [
+                [1,2,3],
+                [4,5,6],
+                [7,8,9]
+            ],
+            [
+                [7,4,1],
+                [8,5,2],
+                [9,6,3]
+            ]
+        ),
+
+            ([[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[7, 4, 1], [8, 5, 2], [9, 6, 3]]),
+            (
+                [
+                    [1, 2, 3, 4, 5],
+                    [6, 7, 8, 9, 10],
+                    [11, 12, 13, 14, 15],
+                    [16, 17, 18, 19, 20],
+                    [21, 22, 23, 24, 25],
+                ],
+                [
+                    [21, 16, 11, 6, 1],
+                    [22, 17, 12, 7, 2],
+                    [23, 18, 13, 8, 3],
+                    [24, 19, 14, 9, 4],
+                    [25, 20, 15, 10, 5],
+                ],
+            ),
+    ]
+    testable_functions = [
+        rotate_matrix_InPlace,
+        rotate_matrix
+    ]
+
+    def test_rotate_matrix(self):
+        for function in self.test_functions:
+            for (_input, _output) in self.test_cases:
+                assert function(_input) == _output
 
 if __name__ == '__main__':
-    for (_input, _output) in test_cases:
-        assert rotate_matrix(_input) == _output, f'{_input}, {_output}, {rotate_matrix(_input)}'
-    print('all done')
+    # for (_input, _output) in test_cases:
+    #     assert rotate_matrix(_input) == _output, f'{_input}, {_output}, {rotate_matrix(_input)}'
+    # print('all done')
 
-    test_list = [[]]*5
-    print(id(test_list[0]) == id(test_list[1]))
+    # test_list = [[]]*5
+    # print(id(test_list[0]) == id(test_list[1]))
+    unittest.main()
