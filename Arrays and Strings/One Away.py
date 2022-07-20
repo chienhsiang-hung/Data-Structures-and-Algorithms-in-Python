@@ -21,12 +21,18 @@ def one_away(s1, s2):
     
     # insert, remove
     # 1. distinguish long s and short s
-    longS, shortS = s1, s2 if len(s1) > len(s2) else s2, s1
+    (longS, shortS) = (s1, s2) if len(s1) > len(s2) else (s2, s1)
     
     # 2. kick out those len dif > 1
     if len(longS) - len(shortS) > 1:
         return False
-    else
+    else:
+        # 3. find the extra one
+        for i in range( len(shortS) ):
+            if longS[i] != longS[i]:
+                return longS[i+1:] == shortS[i:]
+        return True
+                
             
 def one_away_Wrong(s1, s2):
     overlapped_len = len( set(s1) & set(s2) )
