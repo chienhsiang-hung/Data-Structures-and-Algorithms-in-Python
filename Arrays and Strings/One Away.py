@@ -5,7 +5,29 @@ test_cases = [
     ('pale', 'bake', False),
     ('aaa', 'aab', True),
     ('aaa', 'aaaa', True),
-    ('abcd', 'bcda', False)
+    ('abcd', 'bcda', False),
+
+        ('pale', 'ple', True),
+        ('pales', 'pale', True),
+        ('pale', 'bale', True),
+        ('paleabc', 'pleabc', True),
+        ('pale', 'ble', False),
+        ('a', 'b', True),
+        ('', 'd', True),
+        ('d', 'de', True),
+        ('pale', 'pale', True),
+        ('pale', 'ple', True),
+        ('ple', 'pale', True),
+        ('pale', 'bale', True),
+        ('pale', 'bake', False),
+        ('pale', 'pse', False),
+        ('ples', 'pales', True),
+        ('pale', 'pas', False),
+        ('pas', 'pale', False),
+        ('pale', 'pkle', True),
+        ('pkle', 'pable', False),
+        ('pal', 'palks', False),
+        ('palks', 'pal', False)
 ]
 
 def one_away(s1, s2):
@@ -29,7 +51,7 @@ def one_away(s1, s2):
     else:
         # 3. find the extra one
         for i in range( len(shortS) ):
-            if longS[i] != longS[i]:
+            if longS[i] != shortS[i]:
                 return longS[i+1:] == shortS[i:]
         return True
                 
