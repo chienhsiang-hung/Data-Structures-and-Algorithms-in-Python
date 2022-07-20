@@ -43,6 +43,11 @@ test_cases = [
         ),
 ]
 
+def rotate_matrix_InPlace(matrix):
+    height = len(matrix)
+    width = len(matrix[0])
+    pass
+
 def rotate_matrix(matrix):
     '''
     Assume no 0x0. The smallest is 1x1.
