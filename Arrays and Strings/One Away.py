@@ -18,8 +18,15 @@ def one_away(s1, s2):
             if replace_chr > 1:
                 return False
         return True
-    # insert, remove
     
+    # insert, remove
+    # 1. distinguish long s and short s
+    longS, shortS = s1, s2 if len(s1) > len(s2) else s2, s1
+    
+    # 2. kick out those len dif > 1
+    if len(longS) - len(shortS) > 1:
+        return False
+    else
             
 def one_away_Wrong(s1, s2):
     overlapped_len = len( set(s1) & set(s2) )
