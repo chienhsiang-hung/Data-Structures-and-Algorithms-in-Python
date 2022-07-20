@@ -27,7 +27,35 @@ test_cases = [
         ('pale', 'pkle', True),
         ('pkle', 'pable', False),
         ('pal', 'palks', False),
-        ('palks', 'pal', False)
+        ('palks', 'pal', False),
+
+        # no changes
+        ("pale", "pale", True),
+        ("", "", True),
+        # one insert
+        ("pale", "ple", True),
+        ("ple", "pale", True),
+        ("pales", "pale", True),
+        ("ples", "pales", True),
+        ("pale", "pkle", True),
+        ("paleabc", "pleabc", True),
+        ("", "d", True),
+        ("d", "de", True),
+        # one replace
+        ("pale", "bale", True),
+        ("a", "b", True),
+        ("pale", "ble", False),
+        # multiple replace
+        ("pale", "bake", False),
+        # insert and replace
+        ("pale", "pse", False),
+        ("pale", "pas", False),
+        ("pas", "pale", False),
+        ("pkle", "pable", False),
+        ("pal", "palks", False),
+        ("palks", "pal", False),
+        # permutation with insert shouldn't match
+        ("ale", "elas", False),        
 ]
 
 def one_away(s1, s2):
