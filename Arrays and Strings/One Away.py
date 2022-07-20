@@ -9,7 +9,17 @@ test_cases = [
 ]
 
 def one_away(s1, s2):
-    pass
+    # replace
+    if len(s1) == len(s2):
+        replace_chr = 0
+        for chr1, chr2 in zip(s1, s2):
+            if chr1 != chr2:
+                replace_chr += 1
+            if replace_chr > 1:
+                return False
+        return True
+    # insert, remove
+    
             
 def one_away_Wrong(s1, s2):
     overlapped_len = len( set(s1) & set(s2) )
