@@ -25,7 +25,7 @@ When doing unittest for 'in-place' function, remember to deepcopy the test set f
 from copy import deepcopy
 
 for (_input, _output) in  self.test_cases:
-    _input = deepcopy(_input) # don't forget this line if you're using unittest.main(), it's because of concurrent and inplace I guess
+    _input = deepcopy(_input) # don't forget this line, because it changes original input that make your right answer to be wrong
 ```
 or
 ```python

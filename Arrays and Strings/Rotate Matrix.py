@@ -143,7 +143,7 @@ class Test(unittest.TestCase):
         for function in self.testable_functions:
             print(function)
             for (_input, _output) in self.test_cases:
-                _input = deepcopy(_input) # don't forget this line if you're using unittest.main(), it's because of concurrent and inplace I guess
+                _input = deepcopy(_input) # don't forget this line, because it changes original input that make your right answer to be wrong
                 assert function(_input) == _output, f'{_input}, {_output}, {function(_input)}'
 
 if __name__ == '__main__':
