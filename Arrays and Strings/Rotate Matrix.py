@@ -1,11 +1,22 @@
 import unittest
 
-
+            # [
+            #     [1,2,3],
+            #     [4,5,6],
+            #     [7,8,9]
+            # ],
+            # [
+            #     [7,4,1],
+            #     [8,5,2],
+            #     [9,6,3]
+            # ]
 
 def rotate_matrix_InPlace(matrix):
-    height = len(matrix)
-    width = len(matrix[0])
-    return True
+    '''
+    for NxN square matrix
+    '''
+    rotate_times = len(matrix) - 1
+    
 
 def rotate_matrix(matrix):
     '''
