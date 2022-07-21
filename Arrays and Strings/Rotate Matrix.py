@@ -15,8 +15,17 @@ def rotate_matrix_InPlace(matrix):
     '''
     for NxN square matrix
     '''
-    rotate_times = len(matrix) - 1
-    
+    item = len(matrix) - 1
+    layer = item - 2
+
+    i = j = 0
+    while layer >= 0:
+        matrix[i][j] = matrix[j][item]
+        matrix[j][item] = matrix[item][item-j]
+        matrix[item][item-j] = matrix[item-j][i]
+        matrix[item-j][i] = matrix[i][j]
+
+
 
 def rotate_matrix(matrix):
     '''
