@@ -1,15 +1,24 @@
 import unittest
 
-            # [
-            #     [1,2,3],
-            #     [4,5,6],
-            #     [7,8,9]
-            # ],
-            # [
-            #     [7,4,1],
-            #     [8,5,2],
-            #     [9,6,3]
-            # ]
+
+
+# [[21, 16, 11, 6, 1], 
+# [22, 17, 8, 7, 2], 
+# [23, 12, 13, 14, 3], 
+# [24, 19, 18, 9, 4], 
+# [25, 20, 15, 10, 5]]
+
+# [[21, 16, 11, 6, 1], 
+# [22, 17, 12, 7, 2], 
+# [23, 18, 13, 8, 3], 
+# [24, 19, 14, 9, 4], 
+# [25, 20, 15, 10, 5]]
+
+# [[21, 16, 11, 6, 1], 
+# [22, 19, 12, 17, 2], 
+# [23, 18, 13, 8, 3], 
+# [24, 9, 14, 7, 4], 
+# [25, 20, 15, 10, 5]]
 
 def rotate_matrix_InPlace(matrix):
     '''
@@ -21,18 +30,15 @@ def rotate_matrix_InPlace(matrix):
     i = 0
     while i <= layer:
         j = i
-        while j <= item:
-            matrix[i][j] = matrix[j][item-i]
-            matrix[j][item-i] = matrix[item-i][item-j]
-            matrix[item-i][item-j] = matrix[item-j][i]
-            matrix[item-j][i] = matrix[i][j]
-            print(matrix)
+        while j <= item -1 -i:
+            # (0,0) -> (0,2), (0,2) -> (2,2),    (2,2) -> (2,0),       (2,0) -> (0,0)
+            matrix[i][j], matrix[j][item-i], matrix[item-i][item-j], matrix[item-j][i] = matrix[item-j][i], matrix[i][j], matrix[j][item-i], matrix[item-i][item-j]
+            # i = 1, j = 3, item = 4
+            # (1, 3), (3, 3), (3, 1), (1, 1)
             
             j += 1
         i += 1
     return matrix
-
-
 
 def rotate_matrix(matrix):
     '''
@@ -135,15 +141,17 @@ class Test(unittest.TestCase):
     ]
 
     def test_rotate_matrix(self):
-        for function in self.test_functions:
+        for function in self.testable_functions:
+            print(function)
             for (_input, _output) in self.test_cases:
                 assert function(_input) == _output, f'{_input}, {_output}, {function(_input)}'
 
 if __name__ == '__main__':
     for (_input, _output) in Test.test_cases:
         assert rotate_matrix_InPlace(_input) == _output, f'{_input}, {_output}, {rotate_matrix_InPlace(_input)}'
+        print(f'{_input}, {_output}, {rotate_matrix_InPlace(_input)}')
     print('all done')
 
     test_list = [[]]*5
     print(id(test_list[0]) == id(test_list[1]))
-    # unittest.main()
+    unittest.main()
