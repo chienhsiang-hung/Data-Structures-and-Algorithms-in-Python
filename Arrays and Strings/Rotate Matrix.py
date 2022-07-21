@@ -148,10 +148,12 @@ class Test(unittest.TestCase):
 
 if __name__ == '__main__':
     for (_input, _output) in Test.test_cases:
+        print(id(_input), id(_output))
+        print(_input, _output)
         assert rotate_matrix_InPlace(_input) == _output, f'{_input}, {_output}, {rotate_matrix_InPlace(_input)}'
         print(f'{_input}, {_output}, {rotate_matrix_InPlace(_input)}')
     print('all done')
 
     test_list = [[]]*5
     print(id(test_list[0]) == id(test_list[1]))
-    unittest.main()
+    # unittest.main()
