@@ -36,7 +36,11 @@ def zero_matrix(matrix):
 
 if __name__ == '__main__':
     for (_input, _output) in test_cases:
-        print( zero_matrix(_input) == _output )
+        _input_copy = _input.copy()
+        assert zero_matrix(_input_copy) == _output 
+    print('all done')
 
-        if zero_matrix(_input) != _output:
-            print(_input, _output, zero_matrix(_input))
+        # in-place function should avoid to be execute multiple times on same test set
+        # if zero_matrix(_input) != _output:
+        #     print(_input, _output, zero_matrix(_input))
+            
