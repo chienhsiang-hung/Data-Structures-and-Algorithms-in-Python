@@ -21,7 +21,7 @@ See example [Data-Structures-and-Algorithms-in-Python/Rotate Matrix.py at main Â
 
 ## Unittest Heads Up
 ### 'in-place' function
-When doing unittest for 'in-place' function, remember to deepcopy the test set for concurrent looping tests, i.e.
+When doing unittest for 'in-place' function, remember to deepcopy the test set for looping tests, i.e.
 ```python
 from copy import deepcopy
 
