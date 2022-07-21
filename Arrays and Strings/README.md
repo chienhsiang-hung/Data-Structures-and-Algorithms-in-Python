@@ -29,6 +29,17 @@ for (_input, _output) in  self.test_cases:
 ```
 or
 ```python
+for text, expected in self.test_cases:
+    _input = deepcopy(text) # don't forget this line, because it changes original input that make your right answer to be wrong
+    for func in self.testable_functions:
+        start = time.perf_counter()
+        func(_input)
+        assert(
+            _input == expected
+        ), f'{func.__name__} failed for value: {text}, output={_input}, expected={expected}'
+```
+or
+```python
 for (_input, _output) in test_cases:
     _input_copy = _input.copy()
     assert zero_matrix(_input_copy) == _output 

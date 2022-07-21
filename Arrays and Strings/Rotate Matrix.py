@@ -1,5 +1,7 @@
 import unittest
 from copy import deepcopy
+from collections import defaultdict
+import time
 
 # [[21, 16, 11, 6, 1], 
 # [22, 17, 8, 7, 2], 
@@ -139,21 +141,39 @@ class Test(unittest.TestCase):
         rotate_matrix
     ]
 
+    # def test_rotate_matrix(self):
+    #     for function in self.testable_functions:
+    #         print(function)
+    #         for (_input, _output) in self.test_cases:
+    #             _input = deepcopy(_input) # don't forget this line, because it changes original input that make your right answer to be wrong
+    #             assert function(_input) == _output, f'{_input}, {_output}, {function(_input)}'
+
     def test_rotate_matrix(self):
-        for function in self.testable_functions:
-            print(function)
-            for (_input, _output) in self.test_cases:
-                _input = deepcopy(_input) # don't forget this line, because it changes original input that make your right answer to be wrong
-                assert function(_input) == _output, f'{_input}, {_output}, {function(_input)}'
+        num_runs = 1000
+        function_runtimes = defaultdict(float)
+        for _ in range(num_runs):
+            for text, expected in self.test_cases:
+                _input = deepcopy(text) # don't forget this line, because it changes original input that make your right answer to be wrong
+                for func in self.testable_functions:
+                    start = time.perf_counter()
+                    func(_input)
+                    assert(
+                        _input == expected
+                    ), f'{func.__name__} failed for value: {text}, output={_input}, expected={expected}'
+
+                    function_runtimes[func.__name__] += (time.perf_counter() - start) * 1000
+        print(f'\n{num_runs} runs')
+        for function_name, runtime in function_runtimes.items():
+            print(f'{function_name}: {runtime:.1f}ms')
 
 if __name__ == '__main__':
-    for (_input, _output) in Test.test_cases:
-        print(id(_input), id(_output))
-        print(_input, _output)
-        assert rotate_matrix_InPlace(_input) == _output, f'{_input}, {_output}, {rotate_matrix_InPlace(_input)}'
-        print(f'{_input}, {_output}, {rotate_matrix_InPlace(_input)}')
-    print('all done')
+    # for (_input, _output) in Test.test_cases:
+    #     print(id(_input), id(_output))
+    #     print(_input, _output)
+    #     assert rotate_matrix_InPlace(_input) == _output, f'{_input}, {_output}, {rotate_matrix_InPlace(_input)}'
+    #     print(f'{_input}, {_output}, {rotate_matrix_InPlace(_input)}')
+    # print('all done')
 
-    test_list = [[]]*5
-    print(id(test_list[0]) == id(test_list[1]))
-    # unittest.main()
+    # test_list = [[]]*5
+    # print(id(test_list[0]) == id(test_list[1]))
+    unittest.main()
