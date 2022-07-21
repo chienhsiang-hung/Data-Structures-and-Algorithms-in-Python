@@ -18,14 +18,15 @@ def rotate_matrix_InPlace(matrix):
     item = len(matrix) - 1
     layer = item - 2
 
-    i = j = 0
+    i = 0
     while i <= layer:
         j = i
         while j <= item:
-            matrix[i][j] = matrix[j][item]
-            matrix[j][item] = matrix[item][item-j]
-            matrix[item][item-j] = matrix[item-j][i]
+            matrix[i][j] = matrix[j][i]
+            matrix[j][item-i] = matrix[item-i][item-j]
+            matrix[item-i][item-j] = matrix[item-j][i]
             matrix[item-j][i] = matrix[i][j]
+            print(matrix)
             
             j += 1
         i += 1
