@@ -136,7 +136,7 @@ class Test(unittest.TestCase):
     def test_rotate_matrix(self):
         for function in self.test_functions:
             for (_input, _output) in self.test_cases:
-                assert function(_input) == _output
+                assert function(_input) == _output, f'{_input}, {_output}, {function(_input)}'
 
 if __name__ == '__main__':
     # for (_input, _output) in test_cases:
